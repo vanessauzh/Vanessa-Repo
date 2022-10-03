@@ -11,5 +11,7 @@ To do List:
 - [x] Get familiar with GitHub
 - [x] Create Repo
 - [x] Include some things inside README.md
+- [x] Add Issue
+- [x] Test R knowledge
 - [ ] Get familiar with Quarto
 - [ ] Solve task 1B and upload files to repo
