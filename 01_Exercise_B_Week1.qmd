@@ -1,0 +1,44 @@
+---
+title: "Exercise B Week 1"
+format: html
+editor: visual
+---
+
+## Exercise B Week 1
+
+#### What to do: 
+
+Create an HTML document with R code that samples 100 values from a negative binomial distribution (say, mu=10, dispersion=2; using the parameterisation with mean=mu and variance=mu+mu2\*dispersion); create a histogram of sampled data on both the linear and log \[or maybe log(x+1) due to zeros\] scale; Write 1-2 sentences to describe your steps (ideally also with section headings) and report the mean and variance of the sample in line in the text.
+
+#### 1.) load libraries and set seed
+
+We need the library MASS for the function "rnegbin" (see below). At first, i thought I was going to work with the function "rnbinom" and for that, I would have used the library stats. To make the process replicable, I set the seed.
+
+```{r}
+library(MASS)
+#library(stats)
+set.seed(41)
+```
+
+#### 2.) create data
+
+It turns out that rnbinom is not the correct function when we want to work with the variance mu+mu^2^/theta. The correct function is rnegbin, where we can generate 100 random outcomes from a Negative Binomial distribution with mean mu=10 and theta=2 with the variance that is asked for.
+
+```{r}
+#?rnbinom
+#data <- rnbinom(100, size=2, mu=10)
+#?rnegbin
+data <- rnegbin(100, mu=10, theta=2)
+```
+
+#### 4.) Plot the histograms
+
+Lastly, I created one histogram on the linear scale (with a title so it is obvious that it is linear) and one on the log scale. In order to avoid computation errors if we have a 0 in the data, I took the logarithm of the data + 1.
+
+```{r}
+#?hist
+hist(data, main="Histogram on the linear scale")
+hist(log(data+1), main="Histogram on the log scale")
+```
+
+The mean of the data is given by mu=`r mean(data)` and the variance is var=`r var(data)`.
