@@ -3,6 +3,13 @@ Repository of Vanessa
 ## Description
 This will be my project.
 
-Google: [Google](https://google.ch)
+Link to Google: [Google](https://google.ch)
 
-Image: ![A squirrel!](https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/EasternGraySquirrel_GAm.jpg/440px-EasternGraySquirrel_GAm.jpg?raw=true)
+Image of a Squirrel: ![A squirrel!](https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/EasternGraySquirrel_GAm.jpg/440px-EasternGraySquirrel_GAm.jpg?raw=true)
+
+To do List:
+- [x] Get familiar with GitHub
+- [x] Create Repo
+- [x] Include some things inside README.md
+- [ ] Get familiar with Quarto
+- [ ] Solve task 1B and upload files to repo
